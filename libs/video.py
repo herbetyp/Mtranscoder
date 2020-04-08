@@ -15,7 +15,7 @@ class Video:
         self.codec_audio = '-c:a aac'
         self.crf = '-crf 20'
         self.preset = '-preset ultrafast'
-        self.bitrate_audio = bitrate + ' -f adts'
+        self.bitrate_audio = bitrate
         self.command_ffmpeg = 'ffmpeg'
         self.time = ''
         self.source_path = source_path
