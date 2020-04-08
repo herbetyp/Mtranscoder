@@ -26,10 +26,6 @@ class Video:
         files = (file for _, _, files in os.walk(self.source_path)
                  for file in files if self.input_midia_format in file and '_NEW' not in file)
 
-        if not list(files):
-            print(
-                f'\nFiles .{self.input_midia_format} no _NEW not found.')
-
         for file in files:
             name_file, extension_file = os.path.splitext(file)
 
@@ -53,7 +49,7 @@ class Video:
                 f'{self.command_ffmpeg} -i "{self.source_path}/{file}" {caption_input} '
                 f'{self.codec_video} {self.crf} {self.preset} {self.codec_audio} '
                 f'{self.bitrate_audio} {self.time} {caption_map} "{exit_file}" -y'
-                f' &> /dev/null '
+                f' &> /dev/null'
             )
             print('\nThe operation is being performed...')
             os.system(command)
