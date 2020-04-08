@@ -6,7 +6,7 @@ authors = ["Herbety Paulo"]
 license = "GPL-3.0-or-later"
 
 [tool.poetry.dependencies]
-python = "3.7"
+python = "3.8.1"
 
 [tool.poetry.dev-dependencies]
 autopep8 = "^1.5.1"
