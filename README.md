@@ -19,7 +19,7 @@
 | MP3   |  MP4  | 
 | OGG   |  MKV  | 
 | FLAC  |  WMV  |
-| AAC   |   
+| AAC   |  AVI  |
 
 #
 
