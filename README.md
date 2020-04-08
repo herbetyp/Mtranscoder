@@ -4,26 +4,19 @@
 
 ***
 
-## __Features__:
-* Convert videos
+## __Features and tested formats__:
 
-* Converts audios
-
-* Extracts audios from videos
-#
-
-## __Supported and tested formats__:
-
-|*Áudio*|*Vídeo*|
-|:----: |:-----:|
-| MP3   |  MP4  | 
-| OGG   |  MKV  | 
-| FLAC  |  WMV  |
-| AAC   |  AVI  |
+| *Functions*               |*Áudio*|*Vídeo*|
+|:------------------------- |:----: |:-----:|
+|Convert videos             | MP3   |  MP4  | 
+|Converts audios            | OGG   |  MKV  | 
+|Extracts audios from videos| FLAC  |  WMV  |
+|                           | AAC   |  AVI  |
 
 #
 
 ## __Dependencies__:
+
 ## __[FFmpeg](https://www.ffmpeg.org/)__
 
 installation on Fedora:
