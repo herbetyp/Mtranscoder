@@ -20,7 +20,7 @@ class Video:
         self.time = ''
         self.source_path = source_path
         self.output_path = output_path
-        self.time = f'-ss {time[0]} -t {time[1]}'
+        self.time = time
 
     def execute(self):
         files = (file for _, _, files in os.walk(self.source_path)
@@ -51,6 +51,7 @@ class Video:
                 f'{self.bitrate_audio} {self.time} {caption_map} "{exit_file}" -y'
                 f' &> /dev/null'
             )
+            print(command)
             print('\nThe operation is being performed...')
             os.system(command)
             print('\nOperation successfully completed :)')

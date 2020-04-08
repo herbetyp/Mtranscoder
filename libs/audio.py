@@ -13,22 +13,22 @@ class Audio(Video):
         if self.input_midia_format == 'mp3' or self.output_midia_format == 'mp3':
             self.codec_audio = '-acodec libmp3lame'
             self.bitrate_audio = bitrate
-            self.time = f'-ss {time[0]} -t {time[1]}'
+            self.time = time
 
         if self.input_midia_format == 'ogg' or self.output_midia_format == 'ogg':
             self.codec_audio = '-acodec libvorbis'
             self.bitrate_audio = bitrate
-            self.time = f'-ss {time[0]} -t {time[1]}'
+            self.time = time
 
         if self.input_midia_format == 'flac' or self.output_midia_format == 'flac':
             self.codec_audio = '-c:a flac'
             self.bitrate_audio = bitrate
-            self.time = f'-ss {time[0]} -t {time[1]}'
+            self.time = time
 
         if self.input_midia_format == 'aac' or self.output_midia_format == 'aac':
             self.codec_audio = '-c:a aac'
             self.bitrate_audio = bitrate + ' -f adts'
-            self.time = f'-ss {time[0]} -t {time[1]}'
+            self.time = time
 
     def execute(self):
         files = (file for _, _, files in os.walk(self.source_path)

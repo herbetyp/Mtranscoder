@@ -12,6 +12,10 @@ if args.O == '':
     args.O = args.I
 if args.b != '':
     args.b = '-b:a ' + args.b
+if args.t != '':
+    args.t = '-ss ' + args.t[0] + ' -t ' + args.t[1]
+else:
+    args.t = ''
 
 # Executed from for video
 if args.I in video and args.O in video:
