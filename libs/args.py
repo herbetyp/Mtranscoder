@@ -7,21 +7,21 @@ import sys
 def args(args: list) -> dict:
     parser = argparse.ArgumentParser(description='Mtranscoder')
 
-    parser.add_argument('-I', action='store', required=True,
-                        choices=['mp4', 'mkv', 'wmv', 'avi',
-                                 'mp3', 'ogg', 'flac', 'aac', '3gp'],
+    parser.add_argument('-I', action='store', required=False, default='',
+                        choices=['mp4', 'mkv', 'wmv', 'avi', 'flv', 'mov', 'webm',
+                                 'vob', 'mp3', 'ogg', 'flac', 'aac', '3gp'],
                         help='- source media format')
 
     parser.add_argument('-i', action='store', required=False,
                         default=os.path.realpath(os.curdir),
                         help='- source media path')
 
-    parser.add_argument('-O', action='store', required=False, default='',
-                        choices=['mp4', 'mkv', 'wmv', 'avi',
-                                 'mp3', 'ogg', 'flac', 'aac', '3gp'],
+    parser.add_argument('-O', action='store', required=True, default='',
+                        choices=['mp4', 'mkv', 'wmv', 'avi', 'flv', 'mov', 'webm',
+                                 'vob', 'mp3', 'ogg', 'flac', 'aac', '3gp'],
                         help='- output media format')
 
-    parser.add_argument('-o', action='store', required=True,
+    parser.add_argument('-o', action='store', required=False,
                         default=os.path.realpath(os.curdir),
                         help='- output media path')
 
