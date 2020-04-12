@@ -42,6 +42,8 @@ def progressbar(ffmpeg):
                 sys.stdout.write("\r")
                 sys.stdout.flush()
                 sys.stdout.write(f'[{progress}%] ')
+                sys.stdout.write("█ "*20)
+                sys.stdout.flush()
                 print('\n\n# FINISHED #')
                 break
         if not thread_ffmpeg.is_alive():
