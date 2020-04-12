@@ -1,7 +1,7 @@
 from itertools import count
 import os
 
-from .overwrite_file import files_exists, file_exist
+from .check_files import files_exists, file_exist
 from .progresss_bar import progressbar
 
 

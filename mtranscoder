@@ -8,7 +8,8 @@ import subprocess
 
 
 audio = ['mp3', 'ogg', 'aac', 'flac', '']
-video = ['mp4', 'mkv', 'wmv', 'avi', 'flv', 'mov', '3gp', 'vob', 'webm', '']
+video = ['mp4', 'mkv', 'wmv', 'avi', 'flv',
+         'mov', '3gp', 'vob', 'webm', 'wma', '']
 
 if args.O == '':
     args.O = args.I

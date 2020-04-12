@@ -9,7 +9,7 @@ def args(args: list) -> dict:
 
     parser.add_argument('-I', action='store', required=False, default='',
                         choices=['mp4', 'mkv', 'wmv', 'avi', 'flv', 'mov', 'webm',
-                                 'vob', 'mp3', 'ogg', 'flac', 'aac', '3gp'],
+                                 'wma', 'vob', 'mp3', 'ogg', 'flac', 'aac', '3gp'],
                         help='- source media format')
 
     parser.add_argument('-i', action='store', required=False,
@@ -18,7 +18,7 @@ def args(args: list) -> dict:
 
     parser.add_argument('-O', action='store', required=True, default='',
                         choices=['mp4', 'mkv', 'wmv', 'avi', 'flv', 'mov', 'webm',
-                                 'vob', 'mp3', 'ogg', 'flac', 'aac', '3gp'],
+                                 'wma', 'vob', 'mp3', 'ogg', 'flac', 'aac', '3gp'],
                         help='- output media format')
 
     parser.add_argument('-o', action='store', required=False,

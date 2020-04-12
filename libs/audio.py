@@ -2,7 +2,7 @@ from itertools import count
 import os
 
 from .video import Video
-from .overwrite_file import files_exists
+from .check_files import files_exists, file_exist
 from .progresss_bar import progressbar
 
 
@@ -74,7 +74,7 @@ class Audio(Video):
         # One files
         self.source_path = self.source_path.split('/')
 
-        if files_exists(self.source_path[-1], '/'.join(self.source_path), ''):
+        if file_exist(self.source_path[-1], '/'.join(self.source_path)):
             name_file, extension_file = os.path.splitext(self.source_path[-1])
 
             self.source_path = '/'.join(self.source_path)
