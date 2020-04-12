@@ -1,12 +1,12 @@
 import os
 
 
-def file_exists(name_file: str, path: str, output_midia_format: str) -> bool:
+def files_exists(name_file: str, path: str, output_midia_format: str) -> bool:
     if not os.path.exists(path):
         return True
     else:
         print(
-            f'\nThe file {name_file}_NEW.{output_midia_format} already exists.')
+            f'\nThe file {name_file}_{output_midia_format}.{output_midia_format} already exists.')
         option = input('\nDo you want to overwrite[y/n]: ')
         if option.strip().lower() == 'y':
             return True
@@ -14,3 +14,8 @@ def file_exists(name_file: str, path: str, output_midia_format: str) -> bool:
             return False
         else:
             print('\nIncorrect option!')
+
+
+def file_exist(name_file, path):
+    if os.path.exists(path):
+        return True
