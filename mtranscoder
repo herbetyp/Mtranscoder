@@ -1,12 +1,14 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from libs.video import Video
 from libs.audio import Audio
 from libs.args import args
+import subprocess
 
-audio = ['mp3', 'ogg', 'aac', 'flac']
-video = ['mp4', 'mkv', 'wmv', 'avi']
+
+audio = ['mp3', 'ogg', 'aac', 'flac', '']
+video = ['mp4', 'mkv', 'wmv', 'avi', 'flv', 'mov', '3gp', 'vob', 'webm', '']
 
 if args.O == '':
     args.O = args.I
@@ -20,11 +22,22 @@ else:
 # Executed from for video
 if args.I in video and args.O in video:
     video = Video(args.I, args.i, args.O, args.o, args.b, args.t)
-    video.execute()
-    exit()
+    if args.I == '':
+        args.i = args.i.split('/')
+        video.execute_file()
+        exit()
+    else:
+        video.execute_files()
+        exit()
 
 # Executed from for video/audio or audio
 elif args.I in audio or args.I in video and args.O in audio:
     audio = Audio(args.I, args.i, args.O, args.o, args.b, args.t)
-    audio.execute()
-    exit()
+    if args.I == '':
+        args.i = args.i.split('/')
+        audio.execute_file()
+        exit()
+    else:
+        audio.execute_files()
+        # print('files')
+        exit()
