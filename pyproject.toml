@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Mtranscoder"
-version = "0.1.1"
+version = "0.2.1"
 description = "script to transcode media"
 authors = ["Herbety Paulo"]
 license = "GPL-3.0-or-later"
