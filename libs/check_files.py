@@ -16,6 +16,6 @@ def files_exists(name_file: str, path: str, output_midia_format: str) -> bool:
             print('\nIncorrect option!')
 
 
-def file_exist(name_file, path):
-    if os.path.exists(path):
+def file_exist(path):
+    if os.path.exists(path) and os.path.isfile(path):
         return True
