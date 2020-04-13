@@ -40,14 +40,14 @@ class Audio(Video):
     def execute_files(self):
         # Multiple files
         files = (file for _, _, files in os.walk(self.source_path)
-                 for file in files if self.input_midia_format in file)
+                 for file in files if self.input_midia_format in file.split('.')[-1])
         files = tuple(files)
         if files:
             for file in files:
                 name_file, extension_file = os.path.splitext(file)
 
                 exit_file = (
-                    f'{self.output_path}{name_file}_{self.output_midia_format}.'
+                    f'{self.output_path}/{name_file}_{self.output_midia_format}.'
                     f'{self.output_midia_format}'
                 )
                 if files_exists(name_file, exit_file, self.output_midia_format):
@@ -68,13 +68,14 @@ class Audio(Video):
                     exit()
         else:
             print(
-                f'\nFiles with extension .{self.input_midia_format} not found')
+                f'\nFiles with extension .{self.input_midia_format} in "{self.source_path}"\n'
+                f'not found or "{self.source_path}" not is a directory.')
 
     def execute_file(self):
         # One files
         self.source_path = self.source_path.split('/')
 
-        if file_exist(self.source_path[-1], '/'.join(self.source_path)):
+        if file_exist('/'.join(self.source_path)):
             name_file, extension_file = os.path.splitext(self.source_path[-1])
 
             self.source_path = '/'.join(self.source_path)
@@ -101,4 +102,5 @@ class Audio(Video):
                 exit()
         else:
             print(
-                f'\nThe file {self.source_path[-1]} does not exist in {"/".join(self.source_path[:-1])}')
+                f'\nThe file "{"".join(self.source_path).strip()}" does not exist\n'
+                f'or {"".join(self.source_path).strip()}" is a directory.')
