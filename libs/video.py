@@ -54,7 +54,7 @@ class Video:
                 )
                 if files_exists(name_file, exit_file, self.output_midia_format):
                     command = (
-                        f'{self.command_ffmpeg} -i "{self.source_path}{file}" {caption_input} '
+                        f'{self.command_ffmpeg} -i "{self.source_path}/{file}" {caption_input} '
                         f'{self.codec_video} {self.crf} {self.preset} {self.codec_audio} '
                         f'{self.bitrate_audio} {self.time} {caption_map} "{exit_file}" -y'
                         f' &> /dev/null'

@@ -52,7 +52,7 @@ class Audio(Video):
                 )
                 if files_exists(name_file, exit_file, self.output_midia_format):
                     command = (
-                        f'{self.command_ffmpeg} -i "{self.source_path}{file}" -vn '
+                        f'{self.command_ffmpeg} -i "{self.source_path}/{file}" -vn '
                         f'{self.bitrate_audio} {self.codec_audio} {self.time} '
                         f'"{exit_file}" -y &> /dev/null'
                     )
