@@ -6,14 +6,15 @@
 
 ## __Features and tested formats__:
 
-| *Functions*               |*Áudio*|*Vídeo*|
-|:------------------------- |:----: |:-----:|
-|Convert videos             | MP3   |  MP4  | 
-|Converts audios            | OGG   |  MKV  | 
-|Extracts audios from videos| FLAC  |  WMV  |
-|                           | AAC   |  AVI  |
+*__Functions__* |  Convert videos | Converts audios | Extracts audios from videos 
 
-#
+***
+
+*__Áudio__* | MP3 | OGG | FLAC | AAC |
+
+*__Vídeo__* | MP4 | MKV | WMV | AVI | MOV | 3GP | WEBM | VOB | FLV | WMA
+
+#   
 
 ## __Dependencies__:
 
@@ -36,21 +37,42 @@ installation on Manjaro:
 sudo pamac install ffmpeg -y
 ```
 
-## __Downloading project__:
+## __How to contribute to the project__:
 ```
 git clone https://github.com/Pbezerra-dev/Mtranscoder.git
+cd Mtranscoder
+python3 -m venv .venv
+source .venv/bin/activate
 ```
+* There are no third party packages, just builtins
+
+## __To install on the system (Linux)__:
+```
+./install.sh
+```
+* Provide the password and have the program installed
+
 #
 
 ## __Using program__:
-* Arguments are defined via the command line
+* _Arguments are defined via the command line_
+
+* if not installed
 ```
 python3 mtranscoder module path and arguments and their parameters
-
-doubts: python3 module path mtranscoder -h
 ```
+* if you have installed
+
+```
+mtranscoder arguments and their parameters
+```
+
 #
 
-## __Project Image__:
-![Program](img/program.png)
+## __Project Images__:
 
+*__Multiple Files__*:
+![MultipleFiles](img/multiple_files.png)
+
+*__One File__*:
+![OneFile](img/one_file.png)
