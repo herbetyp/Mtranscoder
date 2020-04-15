@@ -11,6 +11,8 @@ audio = ['mp3', 'ogg', 'aac', 'flac', '']
 video = ['mp4', 'mkv', 'wmv', 'avi', 'flv',
          'mov', '3gp', 'vob', 'webm', 'wma', '']
 
+if args.o == '':
+    args.o = args.i
 if args.O == '':
     args.O = args.I
 if args.b != '':
@@ -22,22 +24,12 @@ else:
 
 # Executed from for video
 if args.I in video and args.O in video:
-    video = Video(args.I, args.i, args.O, args.o, args.b, args.t)
-    if args.I == '':
-        args.i = args.i.split('/')
-        video.execute_file()
-        exit()
-    else:
-        video.execute_files()
-        exit()
+    video = Video(args.I, args.i, args.O, args.o, args.b, args.t, args.r)
+    video.execute_files()
+    exit()
 
 # Executed from for video/audio or audio
 elif args.I in audio or args.I in video and args.O in audio:
-    audio = Audio(args.I, args.i, args.O, args.o, args.b, args.t)
-    if args.I == '':
-        args.i = args.i.split('/')
-        audio.execute_file()
-        exit()
-    else:
-        audio.execute_files()
-        exit()
+    audio = Audio(args.I, args.i, args.O, args.o, args.b, args.t, args.r)
+    audio.execute_files()
+    exit()
