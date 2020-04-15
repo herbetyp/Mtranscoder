@@ -32,7 +32,7 @@ def args(args: list) -> dict:
                         default='', help='- media time')
 
     parser.add_argument('-r', action='store', required=False, default=9999,
-                        type=int, help='')
+                        type=int, help='- defined a range for the files')
 
     args = parser.parse_args()
     return args
