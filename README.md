@@ -46,11 +46,18 @@ source .venv/bin/activate
 ```
 * There are no third party packages, just builtins
 
-## __To install on the system (Linux)__:
+## __To install on the system and update (Linux)__:
+
+* install
 ```
-./install.sh
+./up_install.sh
 ```
-* Provide the password and have the program installed
+* update
+```
+git pull origin master
+./up_install.sh
+```
+* Provide the password and have the program installed or update
 
 #
 
