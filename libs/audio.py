@@ -38,7 +38,6 @@ class Audio(Video):
             self.time = time
 
     def execute_files(self):
-        # Multiple files
         files = (file for _, _, files in os.walk(self.source_path)
                  for file in files if self.input_midia_format in file.split('.')[-1])
         files = tuple(files)
@@ -69,7 +68,7 @@ class Audio(Video):
 
                     progressbar(ffmpeg)
                 else:
-                    exit()
+                    continue
         else:
             print(
                 f'\nFiles with extension .{self.input_midia_format} in "{self.source_path}"')
