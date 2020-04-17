@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import os
+
 from libs.video import Video
 from libs.audio import Audio
 from libs.args import args

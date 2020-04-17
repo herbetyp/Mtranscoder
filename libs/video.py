@@ -32,12 +32,16 @@ class Video:
             self.codec_audio = '-c:a ac3'
 
     def execute_files(self):
-        files = set((files for files in os.listdir(self.source_path)[:self.qrange]
-                     if self.input_midia_format in files.split('.')[-1]))
-        print(files)
+        files = (file for _, _, files in os.walk(self.source_path)
+                 for file in files if self.input_midia_format in file.split('.')[-1])
+        files = tuple(files)
         if files:
+            cont = 1
             for file in files:
+                if self.qrange < cont:
+                    break
                 name_file, extension_file = os.path.splitext(file)
+                cont += 1
 
                 caption_path = name_file + '.srt'
 
@@ -68,7 +72,7 @@ class Video:
 
                     progressbar(ffmpeg)
                 else:
-                    break
+                    continue
         else:
             print(
                 f'\nFiles with extension .{self.input_midia_format} in "{self.source_path}"')
