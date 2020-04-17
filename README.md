@@ -77,9 +77,4 @@ mtranscoder arguments and their parameters
 #
 
 ## __Project Images__:
-
-*__Multiple Files__*:
-![MultipleFiles](img/multiple_files.png)
-
-*__One File__*:
-![OneFile](img/one_file.png)
+![ImgProject](img/project.png)

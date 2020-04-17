@@ -34,7 +34,6 @@ class Video:
     def execute_files(self):
         files = set((files for files in os.listdir(self.source_path)[:self.qrange]
                      if self.input_midia_format in files.split('.')[-1]))
-        print(files)
         if files:
             for file in files:
                 name_file, extension_file = os.path.splitext(file)
