@@ -15,7 +15,7 @@ def progressbar(ffmpeg):
             sys.stdout.write("\r")
             sys.stdout.flush()
             sys.stdout.write(f'[{progress}%] ')
-            sys.stdout.write("█ "*(i+1))
+            sys.stdout.write("█ " * (i + 1))
             sys.stdout.flush()
             progress += 2
             sleep(time)
@@ -42,7 +42,7 @@ def progressbar(ffmpeg):
                 sys.stdout.write("\r")
                 sys.stdout.flush()
                 sys.stdout.write(f'[{progress}%] ')
-                sys.stdout.write("█ "*20)
+                sys.stdout.write("█ " * 20)
                 sys.stdout.flush()
                 print('\n\n# FINISHED #')
                 break

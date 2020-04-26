@@ -1,5 +1,7 @@
 # Python 3 script for __converting__ and __extracting__ media - __CLI__
 
+[![Build Status](https://travis-ci.org/Pbezerra-dev/Mtranscoder.svg?branch=master)](https://travis-ci.org/Pbezerra-dev/Mtranscoder)
+
 ![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)
 
 ***
