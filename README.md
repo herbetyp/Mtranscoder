@@ -1,20 +1,23 @@
+[![Build Status](https://travis-ci.org/Pbezerra-dev/Mtranscoder.svg?branch=master)](https://travis-ci.org/Pbezerra-dev/Mtranscoder)
+[![Python 3](https://pyup.io/repos/github/Pbezerra-dev/Mtranscoder/python-3-shield.svg)](https://pyup.io/repos/github/Pbezerra-dev/Mtranscoder/)
+[![Updates](https://pyup.io/repos/github/Pbezerra-dev/Mtranscoder/shield.svg)](https://pyup.io/repos/github/Pbezerra-dev/Mtranscoder/)
+
 # Python 3 script for __converting__ and __extracting__ media - __CLI__
 
-[![Build Status](https://travis-ci.org/Pbezerra-dev/Mtranscoder.svg?branch=master)](https://travis-ci.org/Pbezerra-dev/Mtranscoder)
-
-![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)
+![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)
+![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)![Logo](img/logo.png)
 
 ***
 
 ## __Features and tested formats__:
 
-*__Functions__* |  Convert videos | Converts audios | Extracts audios from videos 
+*__Functions__* |  Convert videos | Converts audios | Extracts audios from videos  
 
 ***
 
-*__Áudio__* | MP3 | OGG | FLAC | AAC |
+*__Áudio__* | MP3 | OGG | FLAC | AAC 
 
-*__Vídeo__* | MP4 | MKV | WMV | AVI | MOV | 3GP | WEBM | VOB | FLV | WMA
+*__Vídeo__* | MP4 | MKV | WMV | AVI | MOV | 3GP | WEBM | VOB | FLV | WMA 
 
 #   
 
@@ -40,11 +43,14 @@ sudo pamac install ffmpeg -y
 ```
 
 ## __How to contribute to the project__:
+
+* __[Using Poetry](https://python-poetry.org/docs/)__
 ```
 git clone https://github.com/Pbezerra-dev/Mtranscoder.git
 cd Mtranscoder
-python3 -m venv .venv
-source .venv/bin/activate
+poetry env use 3.8
+poetry shell 
+poetry install
 ```
 * There are no third party packages, just builtins
 
@@ -75,7 +81,6 @@ python3 mtranscoder module path and arguments and their parameters
 ```
 mtranscoder arguments and their parameters
 ```
-
 #
 
 ## __Project Images__:
