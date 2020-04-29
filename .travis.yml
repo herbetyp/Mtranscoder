@@ -3,6 +3,7 @@ python:
     - 3.7
     - 3.8
 install:
-    - pip install -q -r requirements-dev.txt
+    - pip install -q poetry
+    - poetry install
 script:
-    - flake8
+    - poetry run flake8
