@@ -1,5 +1,5 @@
-autopep8==1.5.1 \
-    --hash=sha256:cc6be1dfd46f2c7fa00e84a357f1a269683985b09eaffb47654ed551194399eb
+autopep8==1.5.2 \
+    --hash=sha256:152fd8fe47d02082be86e05001ec23d6f420086db56b17fc883f3f965fb34954
 entrypoints==0.3 \
     --hash=sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19 \
     --hash=sha256:c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451
