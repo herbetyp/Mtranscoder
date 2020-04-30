@@ -1,6 +1,5 @@
 from unittest import TestCase
 import os
-import sys
 
 from libs.video import Video
 
@@ -22,12 +21,9 @@ class VideoTestExistFile(TestCase):
                                                            '-c:s -map v:0 -map a -map 1:0', 'teste.srt'))
 
     def tearDown(self):
-        try:
-            os.remove('teste.mp4')
-            os.remove('teste.mkv')
-            os.remove('teste.srt')
-        except:
-            ...
+        os.remove('teste.mp4')
+        os.remove('teste.mkv')
+        os.remove('teste.srt')
 
 
 class TestVideoNoExistFile(TestCase):
