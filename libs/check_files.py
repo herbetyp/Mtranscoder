@@ -6,9 +6,8 @@ def files_exists(name_file: str, path: str, output_midia_format: str) -> bool:
         return True
     else:
         while True:
-            print(
-                f'\nINFO: [The file "{name_file}_{output_midia_format}.{output_midia_format}" already exists.]')
-            option = input('\nDo you want to overwrite[y/n]: ')
+            option = input(f'\nINFO: [The file "{name_file}_{output_midia_format}.{output_midia_format}"'
+                           f' already exists.]\n\nDo you want to overwrite[y/n]: ')
             if option.strip().lower() == 'y':
                 return True
             elif option.strip().lower() == 'n':

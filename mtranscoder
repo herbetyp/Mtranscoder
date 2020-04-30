@@ -23,7 +23,10 @@ else:
 # Executed from for video
 if args.I in video and args.O in video:
     video = Video(args.I, args.i, args.O, args.o, args.b, args.t, args.r)
-    video.execute_files()
+    if not video.filter_files():
+        print(f'\nThere is no .{video.input_midia_format} file(s) in {video.source_path}')
+        exit()
+    video.processing_file(video.filter_files())
     exit()
 
 # Executed from for video/audio or audio
