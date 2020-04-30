@@ -7,3 +7,4 @@ install:
     - poetry install
 script:
     - poetry run flake8
+    - poetry run python -m unittest discover tests
