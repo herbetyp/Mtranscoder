@@ -1,5 +1,4 @@
 [flake8]
 max-line-length=120
 exclude=.venv
-ignore=F401 E712
-path=tests
+ignore=E712

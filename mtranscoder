@@ -32,5 +32,8 @@ if args.I in video and args.O in video:
 # Executed from for video/audio or audio
 elif args.I in audio or args.I in video and args.O in audio:
     audio = Audio(args.I, args.i, args.O, args.o, args.b, args.t, args.r)
-    audio.execute_files()
+    if not audio.filter_files():
+        print(f'\nThere is no .{audio.input_midia_format} file(s) in {audio.source_path}')
+        exit()
+    audio.processing_file(audio.filter_files())
     exit()
