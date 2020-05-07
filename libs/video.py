@@ -9,7 +9,7 @@ class Video:
 
     def __init__(
             self, input_midia_format: str, source_path: str, output_midia_format: str,
-            output_path: str, bitrate: str, time: str, qrange: int) -> str:
+            output_path: str, bitrate: str, time: str, qrange: int) -> None:
 
         self.output_midia_format = output_midia_format
         self.input_midia_format = input_midia_format
